@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Verity</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="well">
+    <div>
+      <form class="bank">
+      <h2>Bank</h2></br>
+      <legend class="lead">Amount of Ether</legend>
+      <input class="form-control" type="num" name="ether" id="ether"></br>
+
+      <legend class="lead">Institution Address</legend>
+      <input class="form-control" type="text" name="institute" id="institute"></br>
+      <legend class="lead">Receiver Address</legend>
+      <input class="form-control" type="text" name="receiver" id="receiver"></br>
+      <button class="btn btn-default" id="submit" type="button" onclick="App.deploy()">Deploy</button>
+      </form>
+    </div></br>
+    <div id="test" class="bank">
+    </div>
+    <div id="test" class="bank"></div>
+        
+  </br></br>  </br></br><hr/> </br></br>
+  
+
+
+
+
+
+        
+    <div>
+      <form class="receiver">
+      <h2>Seller</h2></br>
+      <legend class="lead">Select File to Upload to IPFS</legend>
+      <input type="file" id="file"></br>
+      <button class="btn btn-default" id="upload" type="button">Upload</button>
+      </form>
+    </div>
+    
+    <div id="hash" class="receiver"></div>
+    </br></br></br>
+    
+    <div>
+      <form class="receiver">
+      <legend class="lead">Copy and Paste Hash to upload to the Smart Contract</legend>
+      <input class="form-control" type="text" name="hash" id="hash_input"></br>
+      <button class="btn btn-default" id="submit" type="button" onclick="App.uploadFile()">Submit</button>
+      </form>
+    
+    </div>
+
+
+  </br></br></br></br><hr/> </br></br>
+  
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <form class="institution">
+        <h2>Institution</h2></br>
+        <button class="btn btn-default" id="retrieve" type="button">Retrieve File</button>
+        </form>
+      </div>
+      <div id="disp_hash" class="institution"></div>
+      </br></br>
+      
+      <div class="institution" id="retrieved_hash"></div>
+      </br>
+      
+      <div>
+        <form class="institution">
+        <legend class="lead"><h3>Is the file Valid?</h3></legend>
+        <button class="btn btn-default" id="valid" type="button" onclick="App.verify()">Valid</button>
+        <button class="btn btn-default" id="unvalid" type="button" onclick="App.deny()">Unvalid</button>
+      
+        </form>
+      
+      </div>
+      </br></br>
+      <div class="institution" id="message"></div>
+      
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+    $("#upload").click(function() {
+        $("#hash").html("</br><h3>3298694275492602752956272584360324459</h3></br></br></br>");
+      });
+      $("#retrieve").click(function() {
+        $("#disp_hash").html("</br><h3>3298694275492602752956272584360324459</h3></br></br></br>");
+      });
+      </script>
+  </body>
+</html>
