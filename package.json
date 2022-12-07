@@ -16,6 +16,6 @@
     "lite-server": "^2.3.0"
   },
   "dependencies": {
-    "ipfs": "^0.39.0"
+    "ipfs": "^0.65.0"
   }
 }
